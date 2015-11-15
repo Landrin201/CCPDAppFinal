@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CCPDApp</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings for the main activity -->
+    <string name="main_label">Kalamazoo College CCPD</string>
+    <string name="hours_label">Hours</string>
+    <string name="hours">Monday-Friday 8:00-4:00</string>
+    <string name="faq_button_str">FAQ</string>
+    <string name="appointment_button">Appointments</string>
+    <string name="info_button">Info</string>
+    <string name="title_activity_faq">FAQ</string>
+    <string name="faq_add_button">Ask A Question</string>
+    <string name="title_activity_faqsubmission">FAQSubmission</string>
+    <string name="title_activity_request_appointment_time">RequestAppointmentTime</string>
+
+
+</resources>
