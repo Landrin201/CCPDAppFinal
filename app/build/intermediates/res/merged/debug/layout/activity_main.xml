@@ -26,7 +26,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:padding="12dp" />
+        android:padding="12dp"
+        android:paddingTop="30dp"
+        android:layout_below="@+id/mainFAQButton" />
 
     <TextView
         android:id="@+id/mainTextView2"
@@ -44,7 +46,8 @@
         android:text="@string/hours"
         android:id="@+id/textView3"
         android:layout_below="@id/mainTextView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:padding="5dp" />
 
     <Button
         android:id="@+id/mainFAQButton"
@@ -52,11 +55,11 @@
         android:onClick="onFAQButtonClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mainWebView"
-        android:layout_alignLeft="@+id/mainWebView"
-        android:layout_alignStart="@+id/mainWebView"
-        android:layout_toLeftOf="@+id/mainAppointmentButton"
-        android:layout_toStartOf="@+id/mainAppointmentButton" />
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="5dp"
+        android:paddingTop="20dp" />
 
     <Button
         android:id="@+id/mainAppointmentButton"
@@ -64,8 +67,10 @@
         android:onClick="onAppointmentButtonClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mainWebView"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:paddingTop="20dp" />
 
     <Button
         android:id="@+id/mainInfoButton"
@@ -73,8 +78,10 @@
         android:onClick="onInfoButtonClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/mainWebView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:padding="5dp"
+        android:paddingTop="20dp"
+        android:layout_above="@+id/mainWebView"
+        android:layout_toRightOf="@+id/mainTextView1"
+        android:layout_toEndOf="@+id/mainTextView1" />
 
-</RelativeLayout><!-- From: file:/D:/Programming/Programming_Projects/CCPDAppFinal/app/src/main/res/layout/activity_main.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/rapha/StudioProjects/CCPDAppFinal/app/src/main/res/layout/activity_main.xml -->

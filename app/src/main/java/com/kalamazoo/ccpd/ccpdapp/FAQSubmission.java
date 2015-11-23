@@ -1,23 +1,30 @@
 package com.kalamazoo.ccpd.ccpdapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
+/**FAQSubission Class
+ * Created by Raphael Wieland
+ * 11/23/2015
+ */
 public class FAQSubmission extends AppCompatActivity {
 
-    private String kID = "k14rw01";
+    //Declare variables
+    private String kID;
     private Switch ccMeSwitch;
     private EditText enterMessage;
     private String message;
+    SharedPreferences newID;
 
 
     @Override
@@ -30,19 +37,28 @@ public class FAQSubmission extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //assign views to variables
                 ccMeSwitch = (Switch) findViewById(R.id.ccme);
                 enterMessage = (EditText) findViewById(R.id.emailcontent);
                 message = enterMessage.getText().toString();
+                //grab k-id from shared preferences
+                newID = getSharedPreferences("K-ID", Context.MODE_PRIVATE);
+                kID = newID.getString("ID", "No ID entered");
+                //send message
                 if (!message.equals("")) {
+                    //create new email intent
                     Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                             "mailto", "career@kzoo.edu", null));
+                    //check if the user wants to be copied in email
                     if (ccMeSwitch.isChecked()) {
                         emailIntent.putExtra(Intent.EXTRA_CC, new String[]{kID + "@kzoo.edu"});
                     }
+                    //put information into email
                     emailIntent.putExtra(Intent.EXTRA_SUBJECT, "New Question Submitted by " + kID);
                     emailIntent.putExtra(Intent.EXTRA_TEXT, "Question:\n" + message + "\nSubmitted by:\n" + kID);
+                    //start activity
                     startActivity(Intent.createChooser(emailIntent, "Send email..."));
-                } else {
+                } else {//send error toast if the user did not correctly complete submission form
                     Toast.makeText(getApplicationContext(), "Question empty! Please enter your question in the field provided", Toast.LENGTH_LONG).show();
                 }
             }
@@ -56,7 +72,7 @@ public class FAQSubmission extends AppCompatActivity {
      * getMenuInflater().inflate(R.menu.menu_faqsubmission, menu);
      * return true;
      * }
-     **/
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -71,5 +87,5 @@ public class FAQSubmission extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }**/
 }

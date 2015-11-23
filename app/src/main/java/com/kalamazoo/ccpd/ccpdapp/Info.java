@@ -15,9 +15,15 @@ package com.kalamazoo.ccpd.ccpdapp;
 
 public class Info extends AppCompatActivity implements View.OnClickListener{
 
+    Button internshipBtn,externshipBtn, pdiBtn, employerBtn, alumniBtn, parentBtn, aboutBtn;
     String Url;
-    String internshiUrl = "http://reason.kzoo.edu/ccd/internships/";
+    String internshipUrl = "http://reason.kzoo.edu/ccd/internships/";
     String externshipUrl = "http://reason.kzoo.edu/ccd/programs/";
+    String pdiUrl ="http://reason.kzoo.edu/ccd/pdi/";
+    String employerUrl ="http://reason.kzoo.edu/ccd/employers/";
+    String alumniUrl ="http://reason.kzoo.edu/ccd/alumni/";
+    String parentUrl ="http://reason.kzoo.edu/ccd/parents/";
+    String aboutUrl ="http://reason.kzoo.edu/ccd/aboutus/";
     TextView showBox;
 
 
@@ -27,12 +33,23 @@ public class Info extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        Button internshipBtn = (Button) findViewById(R.id.internshipBtn);
-        Button externshipBtn = (Button) findViewById(R.id.externshipBtn);
+        internshipBtn = (Button) findViewById(R.id.internshipBtn);
+        externshipBtn = (Button) findViewById(R.id.externshipBtn);
+        pdiBtn = (Button) findViewById(R.id.internshipBtn);
+        employerBtn = (Button) findViewById(R.id.externshipBtn);
+        alumniBtn = (Button) findViewById(R.id.internshipBtn);
+        parentBtn = (Button) findViewById(R.id.externshipBtn);
+        aboutBtn = (Button) findViewById(R.id.internshipBtn);
 
         showBox = (TextView) findViewById(R.id.showBox);
+
         internshipBtn.setOnClickListener(this);
         externshipBtn.setOnClickListener(this);
+        pdiBtn.setOnClickListener(this);
+        employerBtn.setOnClickListener(this);
+        alumniBtn.setOnClickListener(this);
+        parentBtn.setOnClickListener(this);
+        aboutBtn.setOnClickListener(this);
     }
 
     public class _JSOUP extends AsyncTask<Void, Void, Void>{
@@ -74,11 +91,42 @@ public class Info extends AppCompatActivity implements View.OnClickListener{
     private void externshipBtnClick()
     {
         Url = externshipUrl;
-        new _JSOUP().execute();    }
+        new _JSOUP().execute();
+    }
 
     private void internshipBtnClick()
     {
-        Url = internshiUrl;
+        Url = internshipUrl;
+        new _JSOUP().execute();
+    }
+
+    private void pdiBtnClick()
+    {
+        Url = pdiUrl;
+        new _JSOUP().execute();
+    }
+
+    private void employerBtnClick()
+    {
+        Url = employerUrl;
+        new _JSOUP().execute();
+    }
+
+    private void alumniBtnClick()
+    {
+        Url = alumniUrl;
+        new _JSOUP().execute();
+    }
+
+    private void parentBtnClick()
+    {
+        Url = parentUrl;
+        new _JSOUP().execute();
+    }
+
+    private void aboutBtnClick()
+    {
+        Url = aboutUrl;
         new _JSOUP().execute();
     }
 
@@ -91,6 +139,22 @@ public class Info extends AppCompatActivity implements View.OnClickListener{
                 break;
             case R.id.internshipBtn:
                 internshipBtnClick();
+                break;
+            case R.id.pdiBtn:
+                pdiBtnClick();
+                break;
+            case R.id.employerBtn:
+                employerBtnClick();
+                break;
+            case R.id.alumniBtn:
+                alumniBtnClick();
+                break;
+            case R.id.parentBtn:
+                parentBtnClick();
+                break;
+            case R.id.aboutBtn:
+                aboutBtnClick();
+                break;
         }
     }
 }

@@ -40,6 +40,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Internship"
+                        android:onClick="onClick"
                         android:id="@+id/internshipBtn"
                         android:textSize="10dp" />
 
@@ -49,6 +50,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Externship"
+                        android:onClick="onClick"
                         android:id="@+id/externshipBtn"
                         android:textSize="10dp" />
 
@@ -58,7 +60,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Professional Development Institute"
-                        android:id="@+id/textView9"
+                        android:onClick="onClick"
+                        android:id="@+id/pdiBtn"
                         android:textSize="10dp" />
 
                     <Button
@@ -67,7 +70,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Employer Resources"
-                        android:id="@+id/textView10"
+                        android:onClick="onClick"
+                        android:id="@+id/employerBtn"
                         android:textSize="10dp" />
 
                     <Button
@@ -76,7 +80,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Alumni Resources"
-                        android:id="@+id/textView11"
+                        android:onClick="onClick"
+                        android:id="@+id/alumniBtn"
                         android:textSize="10dp" />
 
                     <Button
@@ -85,7 +90,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Parent Resources"
-                        android:id="@+id/textView12"
+                        android:onClick="onClick"
+                        android:id="@+id/parentBtn"
                         android:textSize="10dp" />
 
                     <Button
@@ -94,7 +100,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="About Us"
-                        android:id="@+id/textView13"
+                        android:onClick="onClick"
+                        android:id="@+id/aboutBtn"
                         android:textSize="10dp" />
                 </LinearLayout>
 

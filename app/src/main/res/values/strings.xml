@@ -14,6 +14,8 @@
     <string name="faq_add_button">Ask A Question</string>
     <string name="title_activity_faqsubmission">FAQSubmission</string>
     <string name="title_activity_request_appointment_time">RequestAppointmentTime</string>
+    <string name="splashtitle">Please enter your K-ID</string>
+    <string name="submit">Submit</string>
 
 
 </resources>

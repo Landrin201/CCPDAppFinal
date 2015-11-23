@@ -8,7 +8,8 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_request_appointment_time"
-    tools:context="com.example.rapha.ccpdsubmissions.RequestAppointmentTime">
+    tools:context="com.example.rapha.ccpdsubmissions.RequestAppointmentTime"
+    android:id="@+id/createAppointment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -95,4 +96,4 @@
         android:checked="true" />
 
 </RelativeLayout>
-<!-- From: file:/D:/Programming/Programming_Projects/CCPDAppFinal/app/src/main/res/layout/content_request_appointment_time.xml -->
+<!-- From: file:/C:/Users/rapha/StudioProjects/CCPDAppFinal/app/src/main/res/layout/content_request_appointment_time.xml -->
